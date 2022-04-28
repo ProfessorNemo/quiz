@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+
+  <question timer="10" score="2">
+    <text>В какой воде меньше содержание примесей? (2 балла)</text>
+    <variants>
+      <variant>минеральная</variant>
+      <variant>морская</variant>
+      <variant right="true">дождевая</variant>
+      <variant>речная</variant>
+    </variants>
+  </question>
+
+  <question timer="10" score="3">
+    <text>Какой химический элемент преобладает в составе каменного угля? (3 балла)</text>
+    <variants>
+      <variant>кремний</variant>
+      <variant>сера</variant>
+      <variant right="true">углерод</variant>
+      <variant>кальций</variant>
+    </variants>
+  </question>
+
+  <question timer="10" score="1">
+    <text>Сколько дней в високосном году? (1 балл)</text>
+    <variants>
+      <variant>367</variant>
+      <variant>364</variant>
+      <variant>340</variant>
+      <variant right="true">366</variant>
+    </variants>
+  </question>
+
+  <question timer="10" score="2">
+    <text>Как называется самая «солнечная» фигура в геометрии? (2 балла)</text>
+    <variants>
+      <variant>круг</variant>
+      <variant right="true">луч</variant>
+      <variant>хорда</variant>
+      <variant>эллипс</variant>
+    </variants>
+  </question>
+
+  <question timer="12" score="5">
+    <text>Людей с какой группой крови чаще кусают комары?(5 баллов)</text>
+    <variants>
+      <variant right="true">1</variant>
+      <variant>2</variant>
+      <variant >3</variant>
+      <variant>4</variant>
+    </variants>
+  </question>
+
+  <question timer="11" score="3">
+    <text>Большое красное пятно на Юпитере, что это? (3 балла)</text>
+    <variants>
+      <variant>Вулкан</variant>
+      <variant right="true">Буря</variant>
+      <variant>Озеро</variant>
+      <variant>Кратер</variant>
+    </variants>
+  </question>
+
+  <question timer="12" score="3">
+    <text>Какой советский фильм считается первым цветным фильмом? (3 балла)</text>
+    <variants>
+      <variant right="true">Броненосец Потемкин</variant>
+      <variant>Они сражались за Родину</variant>
+      <variant>Девчата</variant>
+      <variant>Карнавальная ночь</variant>
+    </variants>
+  </question>
+
+  <question timer="13" score="4">
+    <text>Сколько спутников у Марса? (4 балла)</text>
+    <variants>
+      <variant>1</variant>
+      <variant right="true">2</variant>
+      <variant>3</variant>
+      <variant>4</variant>
+    </variants>
+  </question>
+
+  <question timer="14" score="5">
+    <text>Земля - какая по счету планета от Солнца? (5 баллов)</text>
+    <variants>
+      <variant right="true">3</variant>
+      <variant>4</variant>
+      <variant>2</variant>
+      <variant>1</variant>
+    </variants>
+  </question>
+
+  <question timer="13" score="4">
+    <text>Сколько в 1-й морской миле километров? (4 балла)</text>
+    <variants>
+      <variant>1.609</variant>
+      <variant right="true">1.852</variant>
+      <variant>2.025</variant>
+      <variant>1.093</variant>
+    </variants>
+  </question>
+
+  <question timer="15" score="6">
+    <text>В каком году была создана Организация Объединённых Наций? (6 баллов)</text>
+    <variants>
+      <variant>1961</variant>
+      <variant>1991</variant>
+      <variant>1955</variant>
+      <variant right="true">1945</variant>
+    </variants>
+  </question>
+
+  <question timer="16" score="7">
+    <text>Какова доля азота в атмосфере (в %) (7 баллов)?</text>
+    <variants>
+      <variant right="true">78</variant>
+      <variant>28</variant>
+      <variant>56</variant>
+      <variant>68</variant>
+    </variants>
+  </question>
+
+  <question timer="11" score="5">
+    <text>Какая кинопремия вручается в Каннах? (5 баллов)</text>
+    <variants>
+      <variant>Оскар</variant>
+      <variant right="true">Золотая пальмовая ветвь</variant>
+      <variant>Сатурн</variant>
+      <variant>Зорлотой глобус</variant>
+    </variants>
+  </question>
+
+  <question timer="17" score="8">
+    <text>Как называется самая глубокая точка поверхности Земли, находящаяся на дне Марианской впадины? (8 баллов)</text>
+    <variants>
+      <variant>Филиппинская плита</variant>
+      <variant>Кермадек</variant>
+      <variant>Черное Логово</variant>
+      <variant right="true">Бездна Челленджера</variant>
+    </variants>
+  </question>
+
+</questions>
