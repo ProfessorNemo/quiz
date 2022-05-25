@@ -1,8 +1,8 @@
-# frozen_string_literal: true
+require 'question_collection'
+require 'quiz'
+require 'estimation'
 
-require_relative 'spec_helper'
-
-RSpec.describe QuestionCollection do
+describe QuestionCollection do
   let(:quests) do
     [
       Question.new(text: 'Сколько байт в килобайте?', answers: %w[1000 2048 1024 512], timer: 10, score: 3,
@@ -19,10 +19,6 @@ RSpec.describe QuestionCollection do
   let(:collection) { QuestionCollection.new(quests) }
 
   describe '#from_xml' do
-    it "returns instance of #{QuestionCollection}" do
-      expect(questions_from_fie).to be_an_instance_of QuestionCollection
-    end
-
     it 'the array is a array' do
       expect(questions_from_file.to_a.is_a?(Array)).to be true
     end

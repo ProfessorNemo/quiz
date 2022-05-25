@@ -12,18 +12,6 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 
-path_estimation = File.join(Dir.pwd, 'lib', 'estimation').sub('spec/', '')
-path_question_collection = File.join(Dir.pwd, 'lib', 'question_collection').sub('spec/', '')
-path_question = File.join(Dir.pwd, 'lib', 'question').sub('spec/', '')
-path_quiz = File.join(Dir.pwd, 'lib', 'quiz').sub('spec/', '')
-
-require path_estimation
-require path_question_collection
-require path_question
-require path_quiz
-
-require 'rspec'
-
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

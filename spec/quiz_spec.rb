@@ -1,9 +1,9 @@
-# frozen_string_literal: true
+require 'question_collection'
+require 'quiz'
+require 'estimation'
 
-require_relative 'spec_helper'
-
-RSpec.describe Quiz do
-  let(:quiz) { Quiz.new(QuestionCollection.from_xml("#{__dir__}/questions.xml").to_a) }
+describe Quiz do
+  let(:quiz) { Quiz.new(QuestionCollection.from_xml('questions.xml').to_a) }
 
   let(:quest) { QuestionCollection.new(questions) }
 
@@ -24,9 +24,9 @@ RSpec.describe Quiz do
       question = []
       quiz.questions.map.with_index do |quest, _index|
         question << quest.text
-        break if question.join(' ').freeze.match?(/город/)
+        break if question.join(' ').freeze.match?(/Земля/)
       end
-      expect(question.last.freeze.match?(/город/)).to be true
+      expect(question.last.freeze.match?(/Земля/)).to be true
     end
   end
 

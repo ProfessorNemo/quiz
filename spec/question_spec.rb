@@ -1,8 +1,8 @@
-# frozen_string_literal: true
+require 'question_collection'
+require 'quiz'
+require 'estimation'
 
-require_relative 'spec_helper'
-
-RSpec.describe Question do
+describe Question do
   let(:questions) do
     Question.new(text: 'Сколько дней в високосном году?', answers: %w[367 364 340 366], timer: 10, score: 2,
                  true_answer: '366')

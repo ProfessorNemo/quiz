@@ -8,7 +8,7 @@ end
 
 RANDOM_QUESTIONS = 5
 
-quiz = Quiz.new(QuestionCollection.from_xml("#{__dir__}/spec/questions.xml").to_a)
+quiz = Quiz.new(QuestionCollection.from_xml("#{__dir__}/questions.xml").to_a)
 
 puts 'Мини-викторина. Ответьте на вопросы.'
 
