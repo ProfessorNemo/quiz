@@ -1,19 +1,15 @@
-require 'timeout'
-require 'rexml/xpath'
+# frozen_string_literal: true
 
-PW = 'lib/'.freeze
-%W[#{PW}question_collection #{PW}quiz #{PW}estimation].each do |file|
-  require_relative file
-end
+require_relative 'main'
 
 RANDOM_QUESTIONS = 5
 
-quiz = Quiz.new(QuestionCollection.from_xml("#{__dir__}/questions.xml").to_a)
+quiz = Game::Quiz.new(Game::QuestionCollection.from_xml("#{__dir__}/game/questions.xml").to_a)
 
 puts 'Мини-викторина. Ответьте на вопросы.'
 
 quiz.questions.shuffle.sample(RANDOM_QUESTIONS).each do |question|
-  puts "#{question} (#{Estimation.counting(question.score)})"
+  puts "#{question} (#{Game::Estimation.counting(question.score)})"
 
   question.answers.each.with_index(1) do |var, index|
     puts "#{index}. #{var}"

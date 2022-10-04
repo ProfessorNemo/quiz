@@ -1,11 +1,9 @@
-require 'question_collection'
-require 'quiz'
-require 'estimation'
+# frozen_string_literal: true
 
-describe Question do
+RSpec.describe Game::Question do
   let(:questions) do
-    Question.new(text: 'Сколько дней в високосном году?', answers: %w[367 364 340 366], timer: 10, score: 2,
-                 true_answer: '366')
+    described_class.new(text: 'Сколько дней в високосном году?', answers: %w[367 364 340 366], timer: 10, score: 2,
+                        true_answer: '366')
   end
 
   describe '#new' do
@@ -16,8 +14,8 @@ describe Question do
   end
 
   describe '#read_file' do
-    it "returns instance of #{Question}" do
-      expect(questions).to be_an_instance_of Question
+    it "returns instance of #{described_class}" do
+      expect(questions).to be_an_instance_of described_class
     end
 
     it 'read file correctly' do

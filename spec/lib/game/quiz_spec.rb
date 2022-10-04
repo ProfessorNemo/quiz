@@ -1,11 +1,11 @@
-require 'question_collection'
-require 'quiz'
-require 'estimation'
+# frozen_string_literal: true
 
-describe Quiz do
-  let(:quiz) { Quiz.new(QuestionCollection.from_xml('questions.xml').to_a) }
+RSpec.describe Game::Quiz do
+  let(:file_path) { File.expand_path('./lib/game/questions.xml') }
 
-  let(:quest) { QuestionCollection.new(questions) }
+  let(:quiz) { described_class.new(Game::QuestionCollection.from_xml(file_path).to_a) }
+
+  let(:quest) { Game::QuestionCollection.new(questions) }
 
   describe '#to_a' do
     it 'reads all array xml files' do
@@ -15,7 +15,7 @@ describe Quiz do
 
   describe '#new' do
     it 'checks for compliancen' do
-      expect(quiz).to be_an_instance_of Quiz
+      expect(quiz).to be_an_instance_of described_class
     end
   end
 
@@ -34,17 +34,17 @@ describe Quiz do
     it 'maximum value of balls' do
       max_scor = []
       quiz.questions.map do |question|
-        max_scor << Estimation.counting(question.score).to_i
+        max_scor << Game::Estimation.counting(question.score).to_i
       end
 
-      sum = max_scor.reduce(:+)
+      sum = max_scor.sum
       quiz.scores = max_scor
 
       expect(quiz.result(14))
-        .to eq <<~END
+        .to eq <<~GAME_OVER
           Правильных ответов: #{quiz.questions.size} из 14
-          Вы набрали #{Estimation.counting(sum, false)}!
-        END
+          Вы набрали #{Game::Estimation.counting(sum, false)}!
+        GAME_OVER
     end
   end
 end
